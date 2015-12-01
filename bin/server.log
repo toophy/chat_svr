@@ -1,0 +1,96 @@
+14:04:17 [D] 1           服务器{chat_svr}启动14:04:17 [I] 0 listen ok
+14:04:17 [I] 0 msg=listen ok,name=gate_listen,session=0,info=
+14:04:25 [I] 0 accept ok
+14:04:25 [I] 0 msg=accept ok,name=,session=1,info=
+14:04:33 [D] 1           服务器{chat_svr}启动14:04:33 [I] 0 listen ok
+14:04:33 [I] 0 msg=listen ok,name=gate_listen,session=0,info=
+17:27:37 [D] 1           服务器{chat_svr}启动17:27:37 [I] 0 listen ok
+17:27:37 [D] 1 msg=listen ok,name=gate_listen,session=0,info=17:28:14 [I] 0 accept ok
+17:28:14 [D] 1 msg=accept ok,name=,session=1,info=17:31:29 [D] 1           服务器{chat_svr}启动
+17:31:29 [I] 0 listen ok
+17:31:30 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:31:57 [I] 0 accept ok
+17:31:57 [D] 1 msg=accept ok,name=,session=1,info=
+17:32:00 [W] 3176 Net packet header : 0 != 4
+
+17:32:00 [D] 1 msg=read failed,name=,session=1,info=read tcp 127.0.0.1:9998->127.0.0.1:46232: wsarecv: An existing connection was forcibly closed by the remote host.
+17:32:00 [D] 1 msg=pre close,name=,session=1,info=
+17:32:00 [D] 1 msg=close ok,name=,session=1,info=
+17:32:00 [D] 1 msg=pre close,name=,session=1,info=
+17:32:00 [D] 1 msg=close failed,name=,session=1,info=close tcp 127.0.0.1:9998->127.0.0.1:46232: use of closed network connection
+17:32:06 [I] 0 accept ok
+17:32:06 [D] 1 msg=accept ok,name=,session=2,info=
+17:32:19 [W] 1038 Net packet header : 0 != 4
+
+17:32:19 [D] 1 msg=read failed,name=,session=2,info=read tcp 127.0.0.1:9998->127.0.0.1:46289: wsarecv: An existing connection was forcibly closed by the remote host.
+17:32:19 [D] 1 msg=pre close,name=,session=2,info=
+17:32:19 [D] 1 msg=close ok,name=,session=2,info=
+17:32:19 [D] 1 msg=pre close,name=,session=2,info=
+17:32:19 [D] 1 msg=close failed,name=,session=2,info=close tcp 127.0.0.1:9998->127.0.0.1:46289: use of closed network connection
+17:39:35 [D] 1           服务器{chat_svr}启动
+17:39:35 [I] 0 listen ok
+17:39:35 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:39:50 [D] 1           服务器{chat_svr}启动
+17:39:50 [I] 0 listen ok
+17:39:50 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:40:03 [I] 0 accept ok
+17:40:03 [D] 1 msg=accept ok,name=,session=1,info=
+17:40:06 [W] 7843 Net packet header : 0 != 4
+
+17:40:06 [D] 1 msg=read failed,name=,session=1,info=read tcp 127.0.0.1:9998->127.0.0.1:48501: wsarecv: An existing connection was forcibly closed by the remote host.
+17:40:06 [D] 1 msg=pre close,name=,session=1,info=
+17:40:06 [D] 1 msg=close ok,name=,session=1,info=
+17:40:06 [D] 1 msg=pre close,name=,session=1,info=
+17:40:06 [D] 1 msg=close failed,name=,session=1,info=close tcp 127.0.0.1:9998->127.0.0.1:48501: use of closed network connection
+17:41:10 [D] 1           服务器{chat_svr}启动
+17:41:10 [I] 0 listen ok
+17:41:10 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:41:21 [I] 0 accept ok
+17:41:21 [D] 1 msg=accept ok,name=,session=1,info=
+17:41:22 [W] 3596 Net packet header : 0 != 4
+
+17:41:22 [D] 1 msg=read failed,name=,session=1,info=read tcp 127.0.0.1:9998->127.0.0.1:48919: wsarecv: An existing connection was forcibly closed by the remote host.
+17:41:22 [D] 1 msg=pre close,name=,session=1,info=
+17:41:22 [D] 1 msg=pre close,name=,session=1,info=
+17:41:22 [D] 1 msg=close failed,name=,session=1,info=close tcp 127.0.0.1:9998->127.0.0.1:48919: use of closed network connection
+17:41:22 [D] 1 msg=close ok,name=,session=1,info=
+17:42:02 [D] 1           服务器{chat_svr}启动
+17:42:02 [I] 0 listen ok
+17:42:02 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:42:07 [I] 0 accept ok
+17:42:07 [D] 1 msg=accept ok,name=,session=1,info=
+17:42:07 [W] 1896 Net packet header : 0 != 4
+
+17:42:07 [D] 1 msg=read failed,name=,session=1,info=read tcp 127.0.0.1:9998->127.0.0.1:49135: wsarecv: An existing connection was forcibly closed by the remote host.
+17:42:07 [D] 1 msg=pre close,name=,session=1,info=
+17:42:07 [D] 1 msg=close ok,name=,session=1,info=
+17:42:07 [D] 1 msg=pre close,name=,session=1,info=
+17:42:07 [D] 1 msg=close failed,name=,session=1,info=close tcp 127.0.0.1:9998->127.0.0.1:49135: use of closed network connection
+17:43:19 [D] 1           服务器{chat_svr}启动
+17:43:19 [I] 0 listen ok
+17:43:20 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:43:25 [I] 0 accept ok
+17:43:25 [D] 1 msg=accept ok,name=,session=1,info=
+17:43:28 [W] 2370 Net packet header : 0 != 4
+
+17:43:28 [D] 1 msg=read failed,name=,session=1,info=read tcp 127.0.0.1:9998->127.0.0.1:49526: wsarecv: An existing connection was forcibly closed by the remote host.
+17:43:28 [D] 1 msg=pre close,name=,session=1,info=
+17:43:28 [D] 1 msg=close ok,name=,session=1,info=
+17:43:28 [D] 1 msg=pre close,name=,session=1,info=
+17:43:28 [D] 1 msg=close failed,name=,session=1,info=close tcp 127.0.0.1:9998->127.0.0.1:49526: use of closed network connection
+17:44:09 [D] 1           服务器{chat_svr}启动
+17:44:09 [I] 0 listen ok
+17:44:09 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:44:17 [I] 0 accept ok
+17:44:17 [D] 1 msg=accept ok,name=,session=1,info=
+17:44:18 [W] 3163 Net packet header : 0 != 4
+17:44:18 [D] 1 msg=read failed,name=,session=1,info=read tcp 127.0.0.1:9998->127.0.0.1:49792: wsarecv: An existing connection was forcibly closed by the remote host.
+17:44:18 [D] 1 msg=pre close,name=,session=1,info=
+17:44:18 [D] 1 msg=pre close,name=,session=1,info=
+17:44:18 [D] 1 msg=close failed,name=,session=1,info=close tcp 127.0.0.1:9998->127.0.0.1:49792: use of closed network connection
+17:44:18 [D] 1 msg=close ok,name=,session=1,info=
+17:47:28 [D] 1           服务器{chat_svr}启动
+17:47:28 [I] 0 listen ok
+17:47:28 [D] 1 msg=listen ok,name=gate_listen,session=0,info=
+17:48:07 [I] 0 accept ok
+17:48:07 [D] 1 msg=accept ok,name=,session=1,info=

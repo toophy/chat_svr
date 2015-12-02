@@ -77,12 +77,9 @@ func (this *MasterThread) On_NetPacket(m *toogo.Tmsg_packet) bool {
 	p := new(toogo.PacketReader)
 	p.InitReader(m.Data, uint16(m.Count))
 
-	fmt.Println(m.Count)
-
 	for i := uint32(0); i < m.Count; i++ {
 		msg_len := p.ReadUint16()
 		msg_id := p.ReadUint16()
-		fmt.Println(msg_len, msg_id)
 		switch msg_id {
 		case proto.C2M_login_Id:
 			msg := new(proto.C2M_login)
@@ -90,6 +87,12 @@ func (this *MasterThread) On_NetPacket(m *toogo.Tmsg_packet) bool {
 			fmt.Printf("%d,%d,%-v\n", msg_len, msg_id, msg)
 		}
 	}
+
+	// 网络包解包错误及应对, 严重错误达到一定数量, 断开连接
+	// Count    错误 (太少,太多), 严重错误1次
+	// 长度     错误 (太短,太长), 严重错误1次
+	// 消息ID   错误 (不存在的ID,跳到下一个消息), 严重错误1次
+	// 消息数据 错误 (太长,跳到下一个消息), 严重错误1次
 
 	return true
 }

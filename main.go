@@ -72,33 +72,38 @@ func (this *MasterThread) On_NetEvent(m *toogo.Tmsg_net) bool {
 	return true
 }
 
-// 响应网络消息包
-func (this *MasterThread) On_NetPacket(m *toogo.Tmsg_packet) bool {
-	p := new(toogo.PacketReader)
-	p.InitReader(m.Data, uint16(m.Count))
+// 注册消息
+func (this *MasterThread) On_RegistNetMsg() {
+	this.RegistNetMsg(proto.C2M_login_Id, this.on_c2m_login)
+}
 
-	for i := uint32(0); i < m.Count; i++ {
-		msg_len := p.ReadUint16()
-		msg_id := p.ReadUint16()
-		switch msg_id {
-		case proto.C2M_login_Id:
-			msg := new(proto.C2M_login)
-			msg.Read(p)
-			fmt.Printf("%d,%d,%-v\n", msg_len, msg_id, msg)
-		}
-	}
+func (this *MasterThread) on_c2m_login(pack *toogo.PacketReader, sessionId uint32) bool {
+	msg := new(proto.C2M_login)
+	msg.Read(pack)
 
-	// 网络包解包错误及应对, 严重错误达到一定数量, 断开连接
-	// Count    错误 (太少,太多), 严重错误1次
-	// 长度     错误 (太短,太长), 严重错误1次
-	// 消息ID   错误 (不存在的ID,跳到下一个消息), 严重错误1次
-	// 消息数据 错误 (太长,跳到下一个消息), 严重错误1次
+	// p := new(toogo.PacketWriter)
+	// d := make([]byte, 64)
+	// p.InitWriter(d)
+	// msgLoginRet := new(proto.M2C_login_ret)
+	// msgLoginRet.Ret = 0
+	// msgLoginRet.Msg = "ok"
+	// msgLoginRet.Write(p)
 
+	// p.PacketWriteOver()
+	// session := toogo.GetConnById(sessionId)
+	// m := new(toogo.Tmsg_packet)
+	// m.Data = p.GetData()
+	// m.Len = uint32(p.GetPos())
+	// m.Count = uint32(p.Count)
+
+	// fmt.Println(m)
+
+	// toogo.PostThreadMsg(session.MailId, m)
 	return true
 }
 
 func main() {
 	main_thread := new(MasterThread)
-	main_thread.Init_thread(main_thread, toogo.Tid_master, "master", 100, 10000)
+	main_thread.Init_thread(main_thread, toogo.Tid_master, "master", 1000, 100, 10000)
 	toogo.Run(main_thread)
 }

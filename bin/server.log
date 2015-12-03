@@ -275,3 +275,240 @@
 17:03:53 [I] 0 accept ok
 17:03:53 [D] 1 Conn[1] : Accept ok
 17:03:53 [W] 5720 ReadConnData : len =48, token=0, count=2
+09:55:05 [D] 1           服务器{chat_svr}启动
+09:55:33 [D] 1           服务器{chat_svr}启动
+09:55:33 [I] 0 listen ok
+09:55:33 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+09:55:53 [D] 1           服务器{chat_svr}启动
+10:14:51 [D] 1           服务器{chat_svr}启动
+10:16:06 [D] 1           服务器{chat_svr}启动
+10:16:06 [I] 0 listen ok
+10:16:06 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+10:16:47 [D] 1           服务器{chat_svr}启动
+10:17:05 [D] 1           服务器{chat_svr}启动
+10:17:37 [D] 1           服务器{chat_svr}启动
+10:17:37 [I] 0 listen ok
+10:17:37 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+10:18:24 [D] 1           服务器{chat_svr}启动
+10:18:25 [I] 0 listen ok
+10:18:25 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+10:18:56 [D] 1           服务器{chat_svr}启动
+10:18:56 [I] 0 listen ok
+10:18:56 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+10:19:50 [D] 1           服务器{chat_svr}启动
+10:19:50 [I] 0 listen ok
+10:19:50 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+10:20:07 [D] 1           服务器{chat_svr}启动
+10:20:07 [I] 0 listen ok
+10:20:07 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+10:20:28 [D] 1           服务器{chat_svr}启动
+10:20:28 [I] 0 listen ok
+10:20:28 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:18:04 [D] 1           服务器{chat_svr}启动
+11:18:04 [I] 0 listen ok
+11:18:04 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:18:12 [I] 0 accept ok
+11:18:13 [D] 1 Conn[1] : Accept ok
+11:18:13 [W] 283 ReadConnData : len =48, token=0, count=2
+11:19:20 [D] 1           服务器{chat_svr}启动
+11:19:20 [I] 0 listen ok
+11:19:20 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:20:02 [D] 1           服务器{chat_svr}启动
+11:20:02 [I] 0 listen ok
+11:20:02 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:20:21 [D] 1           服务器{chat_svr}启动
+11:20:21 [I] 0 listen ok
+11:20:21 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:20:44 [D] 1           服务器{chat_svr}启动
+11:20:44 [I] 0 listen ok
+11:20:44 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:21:13 [D] 1           服务器{chat_svr}启动
+11:21:13 [I] 0 listen ok
+11:21:13 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:21:18 [D] 1           服务器{chat_svr}启动
+11:21:18 [I] 0 listen ok
+11:21:18 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:21:38 [D] 1           服务器{chat_svr}启动
+11:21:38 [I] 0 listen ok
+11:21:38 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:21:42 [D] 1           服务器{chat_svr}启动
+11:21:42 [I] 0 listen ok
+11:21:42 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:22:01 [D] 1           服务器{chat_svr}启动
+11:22:01 [I] 0 listen ok
+11:22:01 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:22:10 [D] 1           服务器{chat_svr}启动
+11:22:10 [I] 0 listen ok
+11:22:10 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:23:02 [D] 1           服务器{chat_svr}启动
+11:23:09 [D] 1           服务器{chat_svr}启动
+11:23:09 [I] 0 listen ok
+11:23:10 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:23:50 [D] 1           服务器{chat_svr}启动
+11:23:50 [I] 0 listen ok
+11:23:50 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:24:07 [D] 1           服务器{chat_svr}启动
+11:24:07 [I] 0 listen ok
+11:24:07 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:29:49 [D] 1           服务器{chat_svr}启动
+11:29:49 [I] 0 listen ok
+11:29:49 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:30:01 [I] 0 accept ok
+11:30:01 [D] 1 Conn[1] : Accept ok
+11:30:01 [W] 7866 ReadConnData : len =48, token=0, count=2
+11:31:04 [D] 1           服务器{chat_svr}启动
+11:31:04 [I] 0 listen ok
+11:31:05 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:31:11 [I] 0 accept ok
+11:31:11 [D] 1 Conn[1] : Accept ok
+11:31:11 [W] 550 ReadConnData : len =48, token=0, count=2
+11:32:08 [D] 1           服务器{chat_svr}启动
+11:32:08 [I] 0 listen ok
+11:32:09 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:32:17 [I] 0 accept ok
+11:32:17 [D] 1 Conn[1] : Accept ok
+11:32:17 [W] 5939 ReadConnData : len =48, token=0, count=2
+11:32:37 [D] 1           服务器{chat_svr}启动
+11:32:37 [I] 0 listen ok
+11:32:37 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+11:32:41 [I] 0 accept ok
+11:32:41 [D] 1 Conn[1] : Accept ok
+11:32:41 [W] 5684 ReadConnData : len =48, token=0, count=2
+13:09:14 [D] 1           服务器{chat_svr}启动
+13:09:14 [I] 0 listen ok
+13:09:14 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+13:09:27 [D] 1           服务器{chat_svr}启动
+13:09:27 [I] 0 listen ok
+13:09:27 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+13:11:23 [I] 0 accept ok
+13:11:23 [D] 1 Conn[1] : Accept ok
+13:11:23 [W] 2514 ReadConnData : len =48, token=0, count=2
+13:11:23 [W] 2514 Net packet header : 2 != 4
+13:11:23 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:9565: wsarecv: An existing connection was forcibly closed by the remote host.]
+13:11:23 [D] 1 Conn[1] : Connect pre close
+13:11:23 [D] 1 Conn[1] : Connect close ok.
+13:11:23 [D] 1 Conn[1] : Connect pre close
+13:11:23 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:9565: use of closed network connection]
+13:11:50 [I] 0 accept ok
+13:11:50 [D] 1 Conn[2] : Accept ok
+13:11:50 [W] 3378 ReadConnData : len =48, token=0, count=2
+13:11:50 [W] 3378 Net packet header : 2 != 4
+13:11:50 [E] 1 Conn[2] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:9592: wsarecv: An existing connection was forcibly closed by the remote host.]
+13:11:50 [D] 1 Conn[2] : Connect pre close
+13:11:50 [D] 1 Conn[2] : Connect close ok.
+13:11:50 [D] 1 Conn[2] : Connect pre close
+13:11:50 [E] 1 Conn[2] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:9592: use of closed network connection]
+13:12:06 [D] 1           服务器{chat_svr}启动
+13:12:06 [I] 0 listen ok
+13:12:06 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+13:12:11 [I] 0 accept ok
+13:12:11 [D] 1 Conn[1] : Accept ok
+13:12:11 [W] 2353 ReadConnData : len =48, token=0, count=2
+13:12:11 [W] 2353 Net packet header : 2 != 4
+13:12:11 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:9619: wsarecv: An existing connection was forcibly closed by the remote host.]
+13:12:11 [D] 1 Conn[1] : Connect pre close
+13:12:11 [D] 1 Conn[1] : Connect pre close
+13:12:11 [D] 1 Conn[1] : Connect close ok.
+13:12:11 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:9619: use of closed network connection]
+14:21:31 [D] 1           服务器{chat_svr}启动
+14:21:31 [I] 0 listen ok
+14:21:31 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:22:36 [D] 1           服务器{chat_svr}启动
+14:22:42 [D] 1           服务器{chat_svr}启动
+14:22:42 [I] 0 listen ok
+14:22:42 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:26:02 [D] 1           服务器{chat_svr}启动
+14:26:02 [I] 0 listen ok
+14:26:02 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:27:17 [D] 1           服务器{chat_svr}启动
+14:27:17 [I] 0 listen ok
+14:27:17 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:28:31 [D] 1           服务器{chat_svr}启动
+14:28:31 [I] 0 listen ok
+14:28:31 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:29:04 [D] 1           服务器{chat_svr}启动
+14:29:04 [I] 0 listen ok
+14:29:04 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:30:40 [D] 1           服务器{chat_svr}启动
+14:30:40 [I] 0 listen ok
+14:30:40 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:32:53 [D] 1           服务器{chat_svr}启动
+14:32:53 [I] 0 listen ok
+14:32:53 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:33:09 [I] 0 accept ok
+14:33:09 [D] 1 Conn[1] : Accept ok
+14:33:09 [W] 247 ReadConnData : len =48, token=0, count=2
+14:46:00 [D] 1           服务器{chat_svr}启动
+14:46:22 [D] 1           服务器{chat_svr}启动
+14:46:22 [I] 0 listen ok
+14:46:22 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:46:31 [I] 0 accept ok
+14:46:31 [D] 1 Conn[1] : Accept ok
+14:46:31 [W] 8585 ReadConnData : len =48, token=0, count=2
+14:51:26 [D] 1           服务器{chat_svr}启动
+14:51:26 [I] 0 listen ok
+14:51:26 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:51:34 [I] 0 accept ok
+14:51:34 [D] 1 Conn[1] : Accept ok
+14:51:34 [W] 4467 ReadConnData : len =48, token=0, count=2
+14:51:34 [W] 4467 Net packet header : 2 != 4
+14:51:34 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:13840: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:51:34 [D] 1 Conn[1] : Connect pre close
+14:51:34 [D] 1 Conn[1] : Connect pre close
+14:51:34 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:13840: use of closed network connection]
+14:51:34 [D] 1 Conn[1] : Connect close ok.
+14:54:40 [D] 1           服务器{chat_svr}启动
+14:54:40 [I] 0 listen ok
+14:54:41 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:55:07 [D] 1           服务器{chat_svr}启动
+14:55:07 [I] 0 listen ok
+14:55:07 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:55:36 [D] 1           服务器{chat_svr}启动
+14:55:53 [D] 1           服务器{chat_svr}启动
+14:55:53 [I] 0 listen ok
+14:55:53 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+14:56:01 [I] 0 accept ok
+14:56:01 [D] 1 Conn[1] : Accept ok
+14:56:01 [W] 7094 ReadConnData : len =48, token=0, count=2
+14:56:01 [W] 7094 Net packet header : 2 != 4
+14:56:01 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:14027: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:56:01 [D] 1 Conn[1] : Connect pre close
+14:56:01 [D] 1 Conn[1] : Connect close ok.
+14:56:01 [D] 1 Conn[1] : Connect pre close
+14:56:01 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:14027: use of closed network connection]
+15:01:00 [D] 1           服务器{chat_svr}启动
+15:01:00 [I] 0 listen ok
+15:01:00 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+15:01:06 [I] 0 accept ok
+15:01:06 [D] 1 Conn[1] : Accept ok
+15:01:06 [W] 766 ReadConnData : len =48, token=0, count=2
+15:01:06 [W] 766 Net packet header : 2 != 4
+15:01:06 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:14237: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:01:06 [D] 1 Conn[1] : Connect pre close
+15:01:06 [D] 1 Conn[1] : Connect close ok.
+15:01:06 [D] 1 Conn[1] : Connect pre close
+15:01:06 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:14237: use of closed network connection]
+15:01:52 [D] 1           服务器{chat_svr}启动
+15:01:52 [I] 0 listen ok
+15:01:52 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+15:02:01 [I] 0 accept ok
+15:02:02 [D] 1 Conn[1] : Accept ok
+15:02:02 [W] 2087 ReadConnData : len =48, token=0, count=2
+15:02:02 [W] 2087 Net packet header : 2 != 4
+15:02:02 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:14294: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:02:02 [D] 1 Conn[1] : Connect pre close
+15:02:02 [D] 1 Conn[1] : Connect close ok.
+15:02:02 [D] 1 Conn[1] : Connect pre close
+15:02:02 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:14294: use of closed network connection]
+15:04:23 [D] 1           服务器{chat_svr}启动
+15:04:23 [I] 0 listen ok
+15:04:23 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+15:04:30 [I] 0 accept ok
+15:04:30 [D] 1 Conn[1] : Accept ok
+15:04:30 [W] 2624 ReadConnData : len =48, token=0, count=2
+15:04:35 [W] 2624 Net packet header : 2 != 4
+15:04:35 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:14420: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:04:35 [D] 1 Conn[1] : Connect pre close
+15:04:35 [D] 1 Conn[1] : Connect pre close
+15:04:35 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:14420: use of closed network connection]
+15:04:35 [D] 1 Conn[1] : Connect close ok.

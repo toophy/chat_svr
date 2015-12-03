@@ -623,3 +623,28 @@
 16:51:42 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
 16:51:47 [I] 0 accept ok
 16:51:47 [D] 1 Conn[1] : Accept ok
+17:42:25 [W] 419 Net packet header : 0 != 4
+17:42:25 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:19540: wsarecv: An existing connection was forcibly closed by the remote host.]
+17:42:25 [D] 1 Conn[1] : Connect pre close
+17:42:25 [D] 1 Conn[1] : Connect close ok.
+17:42:25 [D] 1 Conn[1] : Connect pre close
+17:42:25 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:19540: use of closed network connection]
+17:47:37 [D] 1           服务器{chat_svr}启动
+17:47:37 [I] 0 listen ok
+17:47:37 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+17:51:13 [D] 1           服务器{chat_svr}启动
+17:51:13 [I] 0 listen ok
+17:51:14 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+17:55:43 [D] 1           服务器{chat_svr}启动
+17:55:54 [D] 1           服务器{chat_svr}启动
+17:55:54 [I] 0 listen ok
+17:55:54 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+17:56:27 [D] 1           服务器{chat_svr}启动
+17:56:45 [D] 1           服务器{chat_svr}启动
+17:56:45 [I] 0 listen ok
+17:56:45 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+17:57:52 [D] 1           服务器{chat_svr}启动
+17:57:52 [I] 0 listen ok
+17:57:52 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+17:58:11 [I] 0 accept ok
+17:58:11 [D] 1 Conn[1] : Accept ok

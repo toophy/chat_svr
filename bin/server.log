@@ -512,3 +512,114 @@
 15:04:35 [D] 1 Conn[1] : Connect pre close
 15:04:35 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:14420: use of closed network connection]
 15:04:35 [D] 1 Conn[1] : Connect close ok.
+15:10:19 [D] 1           服务器{chat_svr}启动
+15:10:19 [I] 0 listen ok
+15:10:19 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+15:10:27 [I] 0 accept ok
+15:10:27 [D] 1 Conn[1] : Accept ok
+15:10:28 [W] 674 ReadConnData : len =26, token=0, count=1
+15:11:05 [D] 1           服务器{chat_svr}启动
+15:11:05 [I] 0 listen ok
+15:11:05 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+15:11:11 [I] 0 accept ok
+15:11:11 [D] 1 Conn[1] : Accept ok
+15:11:11 [W] 8553 ReadConnData : len =48, token=0, count=2
+15:11:52 [D] 1           服务器{chat_svr}启动
+15:11:52 [I] 0 listen ok
+15:11:52 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+15:12:03 [I] 0 accept ok
+15:12:03 [D] 1 Conn[1] : Accept ok
+15:12:03 [W] 5516 ReadConnData : len =48, token=0, count=2
+15:12:03 [W] 5516 Net packet header : 2 != 4
+15:12:03 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:14835: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:12:03 [D] 1 Conn[1] : Connect pre close
+15:12:03 [D] 1 Conn[1] : Connect pre close
+15:12:03 [D] 1 Conn[1] : Connect close ok.
+15:12:03 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:14835: use of closed network connection]
+16:11:31 [D] 1           服务器{chat_svr}启动
+16:11:31 [I] 0 listen ok
+16:11:31 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:11:35 [I] 0 accept ok
+16:11:35 [D] 1 Conn[1] : Accept ok
+16:11:35 [W] 606 ReadConnData : len =48, token=0, count=2
+16:11:35 [W] 606 Net packet header : 2 != 4
+16:11:35 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:17598: wsarecv: An existing connection was forcibly closed by the remote host.]
+16:11:35 [D] 1 Conn[1] : Connect pre close
+16:11:35 [D] 1 Conn[1] : Connect pre close
+16:11:35 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:17598: use of closed network connection]
+16:11:35 [D] 1 Conn[1] : Connect close ok.
+16:18:53 [D] 1           服务器{chat_svr}启动
+16:18:53 [I] 0 listen ok
+16:18:53 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:18:55 [I] 0 accept ok
+16:18:55 [D] 1 Conn[1] : Accept ok
+16:18:55 [W] 754 ReadConnData : len =48, token=0, count=2
+16:21:42 [D] 1           服务器{chat_svr}启动
+16:21:42 [I] 0 listen ok
+16:21:43 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:21:47 [I] 0 accept ok
+16:21:47 [D] 1 Conn[1] : Accept ok
+16:21:47 [W] 656 ReadConnData : len =48, token=0, count=2
+16:21:54 [W] 656 Net packet header : 2 != 4
+16:21:54 [E] 1 Conn[1] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:18029: wsarecv: An existing connection was forcibly closed by the remote host.]
+16:21:54 [D] 1 Conn[1] : Connect pre close
+16:21:54 [D] 1 Conn[1] : Connect close ok.
+16:21:54 [D] 1 Conn[1] : Connect pre close
+16:21:54 [E] 1 Conn[1] : Connect close failed[close tcp 127.0.0.1:9998->127.0.0.1:18029: use of closed network connection]
+16:22:17 [D] 1           服务器{chat_svr}启动
+16:22:17 [I] 0 listen ok
+16:22:17 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:22:21 [I] 0 accept ok
+16:22:21 [D] 1 Conn[1] : Accept ok
+16:22:21 [W] 50 ReadConnData : len =26, token=0, count=1
+16:22:21 [W] 50 ReadConnData : len =0, token=26, count=0
+16:22:21 [W] 50 Session::runReader:runtime error: makeslice: len out of range
+16:22:21 [D] 1 Conn[1] : Connect pre close
+16:22:21 [D] 1 Conn[1] : Connect close ok.
+16:31:29 [D] 1           服务器{chat_svr}启动
+16:31:29 [I] 0 listen ok
+16:31:29 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:31:36 [I] 0 accept ok
+16:31:36 [D] 1 Conn[1] : Accept ok
+16:31:36 [W] 4912 ReadConnData : len =26, token=0, count=1
+16:31:36 [W] 4912 ReadConnData : len =0, token=26, count=0
+16:31:36 [W] 4912 Session::runReader:runtime error: makeslice: len out of range
+16:31:36 [D] 1 Conn[1] : Connect pre close
+16:31:36 [D] 1 Conn[1] : Connect close ok.
+16:33:25 [D] 1           服务器{chat_svr}启动
+16:33:25 [I] 0 listen ok
+16:33:25 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:33:30 [I] 0 accept ok
+16:33:30 [D] 1 Conn[1] : Accept ok
+16:33:30 [W] 2253 ReadConnData : len =26, token=0, count=1
+16:33:30 [W] 2253 ReadConnData : len =0, token=26, count=0
+16:33:30 [W] 2253 Session::runReader:runtime error: makeslice: len out of range
+16:33:30 [D] 1 Conn[1] : Connect pre close
+16:33:30 [D] 1 Conn[1] : Connect close ok.
+16:35:06 [D] 1           服务器{chat_svr}启动
+16:35:06 [I] 0 listen ok
+16:35:06 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:35:11 [I] 0 accept ok
+16:35:11 [D] 1 Conn[1] : Accept ok
+16:35:11 [W] 481 ReadConnData : len =26, token=0, count=1
+16:35:11 [W] 481 ReadConnData : len =26, token=0, count=1
+16:44:22 [D] 1           服务器{chat_svr}启动
+16:44:22 [I] 0 listen ok
+16:44:22 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:44:26 [I] 0 accept ok
+16:44:26 [D] 1 Conn[1] : Accept ok
+16:44:26 [W] 1924 ReadConnData : len =26, token=0, count=1
+16:44:26 [W] 1924 ReadConnData : len =26, token=0, count=1
+16:45:14 [D] 1           服务器{chat_svr}启动
+16:45:14 [I] 0 listen ok
+16:45:14 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:45:26 [D] 1           服务器{chat_svr}启动
+16:45:26 [I] 0 listen ok
+16:45:26 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:47:02 [I] 0 accept ok
+16:47:02 [D] 1 Conn[1] : Accept ok
+16:51:41 [D] 1           服务器{chat_svr}启动
+16:51:42 [I] 0 listen ok
+16:51:42 [I] 1 gate_listen : Listen(0.0.0.0:8001) ok.
+16:51:47 [I] 0 accept ok
+16:51:47 [D] 1 Conn[1] : Accept ok

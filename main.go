@@ -81,24 +81,22 @@ func (this *MasterThread) on_c2m_login(pack *toogo.PacketReader, sessionId uint3
 	msg := new(proto.C2M_login)
 	msg.Read(pack)
 
-	// p := new(toogo.PacketWriter)
-	// d := make([]byte, 64)
-	// p.InitWriter(d)
-	// msgLoginRet := new(proto.M2C_login_ret)
-	// msgLoginRet.Ret = 0
-	// msgLoginRet.Msg = "ok"
-	// msgLoginRet.Write(p)
+	p := new(toogo.PacketWriter)
+	d := make([]byte, 64)
+	p.InitWriter(d)
+	msgLoginRet := new(proto.M2C_login_ret)
+	msgLoginRet.Ret = 0
+	msgLoginRet.Msg = "ok"
+	msgLoginRet.Write(p)
 
-	// p.PacketWriteOver()
-	// session := toogo.GetConnById(sessionId)
-	// m := new(toogo.Tmsg_packet)
-	// m.Data = p.GetData()
-	// m.Len = uint32(p.GetPos())
-	// m.Count = uint32(p.Count)
+	p.PacketWriteOver()
+	session := toogo.GetConnById(sessionId)
+	m := new(toogo.Tmsg_packet)
+	m.Data = p.GetData()
+	m.Len = uint32(p.GetPos())
+	m.Count = uint32(p.Count)
 
-	// fmt.Println(m)
-
-	// toogo.PostThreadMsg(session.MailId, m)
+	toogo.PostThreadMsg(session.MailId, m)
 	return true
 }
 

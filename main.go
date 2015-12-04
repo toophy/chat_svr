@@ -12,11 +12,11 @@ type MasterThread struct {
 }
 
 // 首次运行
-func (this *MasterThread) On_first_run() {
+func (this *MasterThread) On_firstRun() {
 }
 
 // 响应线程最先运行
-func (this *MasterThread) On_pre_run() {
+func (this *MasterThread) On_preRun() {
 	// 处理各种最先处理的问题
 }
 
@@ -29,7 +29,7 @@ func (this *MasterThread) On_end() {
 }
 
 // 响应网络事件
-func (this *MasterThread) On_NetEvent(m *toogo.Tmsg_net) bool {
+func (this *MasterThread) On_netEvent(m *toogo.Tmsg_net) bool {
 
 	name_fix := m.Name
 	if len(name_fix) == 0 {
@@ -72,8 +72,13 @@ func (this *MasterThread) On_NetEvent(m *toogo.Tmsg_net) bool {
 	return true
 }
 
+// -- 当网络消息包解析出现问题, 如何处理?
+func (this *MasterThread) On_packetError(m *toogo.Tmsg_packet) {
+	toogo.CloseSession(this.Get_thread_id(), m.SessionId)
+}
+
 // 注册消息
-func (this *MasterThread) On_RegistNetMsg() {
+func (this *MasterThread) On_registNetMsg() {
 	this.RegistNetMsg(proto.C2M_login_Id, this.on_c2m_login)
 }
 
@@ -90,7 +95,7 @@ func (this *MasterThread) on_c2m_login(pack *toogo.PacketReader, sessionId uint3
 	msgLoginRet.Write(p)
 
 	p.PacketWriteOver()
-	session := toogo.GetConnById(sessionId)
+	session := toogo.GetSessionById(sessionId)
 	m := new(toogo.Tmsg_packet)
 	m.Data = p.GetData()
 	m.Len = uint32(p.GetPos())

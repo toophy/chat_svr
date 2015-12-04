@@ -83,12 +83,13 @@ func (this *MasterThread) On_registNetMsg() {
 }
 
 func (this *MasterThread) on_c2m_login(pack *toogo.PacketReader, sessionId uint32) bool {
-	msg := new(proto.C2M_login)
+	msg := proto.C2M_login{}
 	msg.Read(pack)
 
 	p := new(toogo.PacketWriter)
 	d := make([]byte, 64)
 	p.InitWriter(d)
+
 	msgLoginRet := new(proto.M2C_login_ret)
 	msgLoginRet.Ret = 0
 	msgLoginRet.Msg = "ok"
@@ -96,6 +97,7 @@ func (this *MasterThread) on_c2m_login(pack *toogo.PacketReader, sessionId uint3
 
 	p.PacketWriteOver()
 	session := toogo.GetSessionById(sessionId)
+
 	m := new(toogo.Tmsg_packet)
 	m.Data = p.GetData()
 	m.Len = uint32(p.GetPos())
@@ -110,3 +112,31 @@ func main() {
 	main_thread.Init_thread(main_thread, toogo.Tid_master, "master", 1000, 100, 10000)
 	toogo.Run(main_thread)
 }
+
+// 封包处理(大批量,或者一个网络口(代理))
+// 简化发送消息的代码
+// Lua支持消息包
+// Lua支持线程间消息
+//
+// Session上面做标记, 大包, 小包 等
+// 每种包会有不同的解包机制, 包头大小
+// 如何在accecpt时就知道这个包属于哪种包头?
+// 是一个什么消息么?
+// 比如, 一开始默认都是小包
+// 验证成功后, 根据对方资质, 变成大包
+// 或者
+// 有一个Listen侦听到的都是服务器连接, 都是大包头?
+// 其实只有gate服连接才是大包头, 其他都是小包头
+//
+// 服务器之间都是大包头, 也即是包长度4字节, 包消息数量2字节,
+// 只有gate和客户端之间才是小包头, 包长度2字节, 包消息数量1字节,
+//
+// 只有服务器和gate服的连接才会包中有包, 其他都是简单的消息处理
+//
+// session需要分清楚
+// 1. 这是什么连接(服务器,客户端)
+// 2. 服务器的连接中, 是否有gate服
+//    a. CG连接 小包
+//    b. SS连接 大包
+//    c. GS连接 混合大包
+//

@@ -665,3 +665,19 @@
 11:47:46 [D] 1 Conn[1] : Connect close ok.
 11:48:13 [I] 0 accept ok
 11:48:13 [D] 1 Conn[2] : Accept ok
+13:33:48 [W] 615 Net packet header : 0 != 4
+13:33:48 [E] 1 Conn[2] : Connect read[read tcp 127.0.0.1:9998->127.0.0.1:7457: wsarecv: An existing connection was forcibly closed by the remote host.]
+13:33:48 [D] 1 Conn[2] : Connect pre close
+13:33:48 [D] 1 Conn[2] : Connect close ok.
+14:28:27 [D] 1           服务器{chat_svr}启动
+14:28:27 [D] 1 to_gate : Connect ok
+14:28:33 [W] 2009 Net packet header : 0 != 5
+14:28:33 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:62195->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:28:33 [D] 1 to_gate : Connect pre close
+14:28:33 [D] 1 to_gate : Connect close ok.
+14:29:08 [D] 1           服务器{chat_svr}启动
+14:29:08 [D] 1 to_gate : Connect ok
+15:05:14 [W] 2828 Net packet header : 0 != 5
+15:05:14 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:62415->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:05:14 [D] 1 to_gate : Connect pre close
+15:05:14 [D] 1 to_gate : Connect close ok.

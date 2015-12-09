@@ -80,6 +80,7 @@ func (this *MasterThread) On_packetError(sessionId uint64) {
 // 注册消息
 func (this *MasterThread) On_registNetMsg() {
 	this.RegistNetMsg(proto.C2S_chat_Id, this.on_c2s_chat)
+	this.RegistNetMsg(proto.G2S_more_packet_Id, this.on_g2s_more_packet)
 }
 
 func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64) bool {
@@ -88,13 +89,31 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 
 	p := toogo.NewPacket(128)
 
-	msgChat := new(proto.S2C_chat)
-	msgChat.Source = ""
-	msgChat.Channel = msg.Channel
-	msgChat.Data = msg.Data
-	msgChat.Write(p)
+	if p != nil {
+		msgChat := new(proto.S2C_chat)
+		msgChat.Source = ""
+		msgChat.Channel = msg.Channel
+		msgChat.Data = msg.Data
+		msgChat.Write(p)
 
-	toogo.SendPacket(p, sessionId)
+		toogo.SendPacket(p, sessionId)
+	}
+
+	return true
+}
+
+func (this *MasterThread) on_g2s_more_packet(pack *toogo.PacketReader, sessionId uint64) bool {
+	defer toogo.RecoverRead(proto.G2S_more_packet_Id)
+
+	// 整包, 多少个消息? 还是一个消息
+	// 消息长度, 去掉消息头, 消息总长度
+	subPackCount := pack.ReadUint16()
+	for i := 0; i < subPackCount; i++ {
+		if !this.ProcSubNetPacket(pack, sessionId, proto.G2S_more_packet_Id) {
+			return false
+		}
+	}
+
 	return true
 }
 

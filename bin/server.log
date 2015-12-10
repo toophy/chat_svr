@@ -700,3 +700,52 @@
 16:41:34 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:54892->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
 16:41:34 [D] 1 to_gate : Connect pre close
 16:41:34 [D] 1 to_gate : Connect close ok.
+09:22:33 [D] 1           服务器{chat_svr}启动
+09:22:34 [D] 1 to_gate : Connect ok
+09:22:58 [D] 1           服务器{chat_svr}启动
+09:22:58 [D] 1 to_gate : Connect ok
+09:22:58 [E] 1 to_gate : Connect read[EOF]
+09:22:58 [D] 1 to_gate : Connect pre close
+09:22:58 [D] 1 to_gate : Connect close ok.
+09:27:57 [D] 1           服务器{chat_svr}启动
+09:27:57 [D] 1 to_gate : Connect ok
+09:27:57 [E] 1 to_gate : Connect read[EOF]
+09:27:57 [D] 1 to_gate : Connect pre close
+09:27:57 [D] 1 to_gate : Connect close ok.
+09:30:24 [D] 1           服务器{chat_svr}启动
+09:30:25 [D] 1 to_gate : Connect ok
+09:30:25 [E] 1 to_gate : Connect read[EOF]
+09:30:25 [D] 1 to_gate : Connect pre close
+09:30:25 [D] 1 to_gate : Connect close ok.
+10:25:45 [D] 1           服务器{chat_svr}启动
+10:25:45 [D] 1 to_gate : Connect ok
+10:36:10 [D] 1           服务器{chat_svr}启动
+10:41:05 [D] 1           服务器{chat_svr}启动
+10:41:05 [D] 1 to_gate : Connect ok
+10:41:28 [D] 1           服务器{chat_svr}启动
+10:41:28 [D] 1 to_gate : Connect ok
+10:42:00 [D] 1           服务器{chat_svr}启动
+10:42:00 [D] 1 to_gate : Connect ok
+10:45:14 [D] 1           服务器{chat_svr}启动
+10:45:14 [D] 1 to_gate : Connect ok
+10:45:26 [D] 1           服务器{chat_svr}启动
+10:45:26 [D] 1 to_gate : Connect ok
+10:47:20 [D] 1           服务器{chat_svr}启动
+10:47:20 [D] 1 to_gate : Connect ok
+10:47:44 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:44200->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+10:47:44 [D] 1 to_gate : Connect pre close
+10:47:44 [D] 1 to_gate : Connect close ok.
+10:47:52 [D] 1           服务器{chat_svr}启动
+10:47:52 [D] 1 to_gate : Connect ok
+10:59:51 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:44247->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+10:59:51 [D] 1 to_gate : Connect pre close
+10:59:51 [D] 1 to_gate : Connect close ok.
+11:00:01 [D] 1           服务器{chat_svr}启动
+11:00:01 [D] 1 to_gate : Connect ok
+11:01:08 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:45648->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+11:01:08 [D] 1 to_gate : Connect pre close
+11:01:08 [D] 1 to_gate : Connect close ok.
+11:01:21 [D] 1           服务器{chat_svr}启动
+11:01:21 [D] 1 to_gate : Connect ok
+11:07:52 [D] 1           服务器{chat_svr}启动
+11:07:52 [D] 1 to_gate : Connect ok

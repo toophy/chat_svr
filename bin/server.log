@@ -749,3 +749,108 @@
 11:01:21 [D] 1 to_gate : Connect ok
 11:07:52 [D] 1           服务器{chat_svr}启动
 11:07:52 [D] 1 to_gate : Connect ok
+10:44:14 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:46122->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+10:44:14 [D] 1 to_gate : Connect pre close
+10:44:14 [D] 1 to_gate : Connect close ok.
+14:09:58 [D] 1           服务器{chat_svr}启动
+14:13:39 [D] 1           服务器{chat_svr}启动
+14:13:39 [D] 1 to_gate : Connect ok
+14:13:39 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:13138->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:13:39 [D] 1 to_gate : Connect pre close
+14:13:39 [D] 1 to_gate : Connect close ok.
+14:15:00 [D] 1           服务器{chat_svr}启动
+14:15:00 [D] 1 to_gate : Connect ok
+14:15:06 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:13254->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:15:06 [D] 1 to_gate : Connect pre close
+14:15:06 [D] 1 to_gate : Connect close ok.
+14:17:06 [D] 1           服务器{chat_svr}启动
+14:17:06 [D] 1 to_gate : Connect ok
+14:17:11 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:13434->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:17:11 [D] 1 to_gate : Connect pre close
+14:17:11 [D] 1 to_gate : Connect close ok.
+14:18:42 [D] 1           服务器{chat_svr}启动
+14:18:42 [D] 1 to_gate : Connect ok
+14:18:47 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:13578->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:18:47 [D] 1 to_gate : Connect pre close
+14:18:47 [D] 1 to_gate : Connect close ok.
+14:19:26 [D] 1           服务器{chat_svr}启动
+14:19:26 [D] 1 to_gate : Connect ok
+14:19:36 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:13677->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+14:19:36 [D] 1 to_gate : Connect pre close
+14:19:36 [D] 1 to_gate : Connect close ok.
+14:21:14 [D] 1           服务器{chat_svr}启动
+14:21:15 [D] 1 to_gate : Connect ok
+14:21:19 [W] 1 SS消息长度无效
+14:21:19 [D] 1 to_gate : Connect pre close
+14:21:19 [D] 1 to_gate : Connect close ok.
+14:21:19 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:13850->127.0.0.1:9999: use of closed network connection]
+14:32:56 [D] 1           服务器{chat_svr}启动
+14:32:56 [D] 1 to_gate : Connect ok
+14:33:27 [W] 1 SS消息长度无效
+14:33:27 [D] 1 to_gate : Connect pre close
+14:33:27 [D] 1 to_gate : Connect close ok.
+14:33:27 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:15368->127.0.0.1:9999: use of closed network connection]
+14:35:25 [D] 1           服务器{chat_svr}启动
+14:35:25 [D] 1 to_gate : Connect ok
+14:35:29 [W] 1 SS消息长度无效
+14:35:29 [D] 1 to_gate : Connect pre close
+14:35:29 [D] 1 to_gate : Connect close ok.
+14:35:29 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:15604->127.0.0.1:9999: use of closed network connection]
+15:04:31 [D] 1           服务器{chat_svr}启动
+15:04:32 [D] 1 to_gate : Connect ok
+15:04:36 [W] 1 SS消息长度无效
+15:04:36 [D] 1 to_gate : Connect pre close
+15:04:36 [D] 1 to_gate : Connect close ok.
+15:04:36 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:17743->127.0.0.1:9999: use of closed network connection]
+15:05:54 [D] 1           服务器{chat_svr}启动
+15:05:54 [D] 1 to_gate : Connect ok
+15:05:58 [W] 1 SS消息长度无效
+15:05:59 [D] 1 to_gate : Connect pre close
+15:05:59 [D] 1 to_gate : Connect close ok.
+15:05:59 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:17871->127.0.0.1:9999: use of closed network connection]
+15:41:05 [D] 1           服务器{chat_svr}启动
+15:41:05 [D] 1 to_gate : Connect ok
+15:41:11 [W] 1 SS消息长度无效
+15:41:11 [D] 1 to_gate : Connect pre close
+15:41:11 [D] 1 to_gate : Connect close ok.
+15:41:11 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:21696->127.0.0.1:9999: use of closed network connection]
+15:43:09 [D] 1           服务器{chat_svr}启动
+15:43:09 [D] 1 to_gate : Connect ok
+15:43:12 [W] 1 SS消息长度无效
+15:43:12 [D] 1 to_gate : Connect pre close
+15:43:12 [D] 1 to_gate : Connect close ok.
+15:43:12 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:21882->127.0.0.1:9999: use of closed network connection]
+15:45:40 [D] 1           服务器{chat_svr}启动
+15:45:40 [D] 1 to_gate : Connect ok
+15:45:45 [W] 1 消息没有对应处理函数
+15:45:45 [D] 1 to_gate : Connect pre close
+15:45:45 [D] 1 to_gate : Connect close ok.
+15:45:45 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:22106->127.0.0.1:9999: use of closed network connection]
+15:53:11 [D] 1           服务器{chat_svr}启动
+15:53:12 [D] 1 to_gate : Connect ok
+15:53:15 [W] 1 消息没有对应处理函数
+15:53:15 [D] 1 to_gate : Connect pre close
+15:53:15 [D] 1 to_gate : Connect close ok.
+15:53:15 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:22650->127.0.0.1:9999: use of closed network connection]
+15:54:08 [D] 1           服务器{chat_svr}启动
+15:54:08 [D] 1 to_gate : Connect ok
+15:54:10 [W] 1 消息没有对应处理函数:9
+15:54:10 [D] 1 to_gate : Connect pre close
+15:54:10 [D] 1 to_gate : Connect close ok.
+15:54:10 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:22740->127.0.0.1:9999: use of closed network connection]
+15:55:56 [D] 1           服务器{chat_svr}启动
+15:55:56 [D] 1 to_gate : Connect ok
+15:55:58 [W] 1 消息没有对应处理函数:9
+15:55:58 [D] 1 to_gate : Connect pre close
+15:55:58 [D] 1 to_gate : Connect close ok.
+15:55:58 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:22932->127.0.0.1:9999: use of closed network connection]
+15:57:08 [D] 1           服务器{chat_svr}启动
+15:57:08 [D] 1 to_gate : Connect ok
+15:57:12 [W] 1 消息没有对应处理函数:9
+15:57:12 [D] 1 to_gate : Connect pre close
+15:57:12 [D] 1 to_gate : Connect close ok.
+15:57:12 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:23048->127.0.0.1:9999: use of closed network connection]
+16:09:18 [D] 1           服务器{chat_svr}启动
+16:09:18 [D] 1 to_gate : Connect ok
+16:09:20 [I] 1 packLen=29,msgCount=1
+16:09:20 [I] 1 Say : 你好,世界!

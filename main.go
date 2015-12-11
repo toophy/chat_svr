@@ -56,26 +56,13 @@ func (this *MasterThread) On_netEvent(m *toogo.Tmsg_net) bool {
 	case "connect ok":
 		this.LogDebug("%s : Connect ok", name_fix)
 
-		pM := toogo.NewPacket(256, m.SessionId)
-		if pM != nil {
-			// defer RecoverWrite(S2G_more_packet_Id)
-			pM.WriteMsgId(proto.S2G_more_packet_Id)
+		p := toogo.NewPacket(128, m.SessionId)
 
-			pC := toogo.NewPacket(128, m.SessionId)
-			if pC != nil {
-				msgChat := new(proto.C2S_chat)
-				msgChat.Channel = 1
-				msgChat.Data = "我是OKOK"
-				msgChat.Write(pC)
-				pC.PacketWriteOver()
+		msgLogin := new(proto.S2G_registe)
+		msgLogin.Sid = 1
+		msgLogin.Write(p)
 
-				pM.WriteUint16(1)
-				pM.WriteDataEx(pC.GetData(), pC.GetPos())
-				pM.WriteMsgOver()
-
-				toogo.SendPacket(pM)
-			}
-		}
+		toogo.SendPacket(p)
 
 	case "read failed":
 		this.LogError("%s : Connect read[%s]", name_fix, m.Info)
@@ -108,17 +95,7 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 	msg := proto.C2S_chat{}
 	msg.Read(pack)
 
-	p := toogo.NewPacket(128, sessionId)
-
-	if p != nil {
-		msgChat := new(proto.S2C_chat)
-		msgChat.Source = ""
-		msgChat.Channel = msg.Channel
-		msgChat.Data = msg.Data
-		msgChat.Write(p)
-
-		toogo.SendPacket(p)
-	}
+	this.LogInfo("Say : %s", msg.Data)
 
 	return true
 }
@@ -128,6 +105,7 @@ func (this *MasterThread) on_g2s_more_packet(pack *toogo.PacketReader, sessionId
 
 	// 整包, 多少个消息? 还是一个消息
 	// 消息长度, 去掉消息头, 消息总长度
+	println("more_packet")
 	subPackCount := pack.ReadUint16()
 	for i := uint16(0); i < subPackCount; i++ {
 		if !this.ProcSubNetPacket(pack, sessionId, proto.G2S_more_packet_Id) {

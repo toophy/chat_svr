@@ -4,11 +4,39 @@ import (
 	"fmt"
 	"github.com/toophy/chat_client/proto"
 	"github.com/toophy/toogo"
+	"sync"
 )
+
+// 帐号
+type GameAccount struct {
+	Id        uint64               // 唯一ID
+	Name      string               // 帐号名
+	RolesId   map[uint64]*GameRole // 角色ID索引
+	RolesName map[string]*GameRole // 角色Name索引
+}
+
+// 角色
+type GameRole struct {
+	Id          uint64 // 唯一ID
+	AccountName uint64 // 帐号名
+	Name        string // 角色名, 可以为空
+	SessionId   uint64 // 网关中的会话ID
+	IpAddress   string // 当前登录IP地址
+}
+
+func (this *GameRole) GetAccountId() uint64 {
+	return this.Id & 0x3FFFFFFFFFF
+}
 
 // 主线程
 type MasterThread struct {
 	toogo.Thread
+	AccountsMutex sync.RWMutex            // 帐号读写锁
+	AccountsId    map[uint64]*GameAccount // 帐号ID索引
+	AccountsName  map[string]*GameAccount // 帐号Name索引
+	RolesMutex    sync.RWMutex            // 帐号读写锁
+	RolesId       map[uint64]*GameRole    // 角色ID索引
+	RolesName     map[string]*GameRole    // 角色Name索引
 }
 
 // 首次运行
@@ -103,9 +131,6 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 func (this *MasterThread) on_g2s_more_packet(pack *toogo.PacketReader, sessionId uint64) bool {
 	defer toogo.RecoverRead(proto.G2S_more_packet_Id)
 
-	// 整包, 多少个消息? 还是一个消息
-	// 消息长度, 去掉消息头, 消息总长度
-	println("more_packet")
 	subPackCount := pack.ReadUint16()
 	for i := uint16(0); i < subPackCount; i++ {
 		if !this.ProcSubNetPacket(pack, sessionId, proto.G2S_more_packet_Id) {
@@ -114,6 +139,92 @@ func (this *MasterThread) on_g2s_more_packet(pack *toogo.PacketReader, sessionId
 	}
 
 	return true
+}
+
+func (this *MasterThread) AddAccount(a *GameAccount) bool {
+	// a.Id范围检查
+	// a.Name长度检查[1,64]
+
+	this.AccountsMutex.Lock()
+	defer this.AccountsMutex.Unlock()
+	if v, ok := this.AccountsId[a.Id]; !ok {
+		this.AccountsId[a.Id] = a
+	} else {
+		return false
+	}
+	if v, ok := this.AccountsName[a.Name]; !ok {
+		this.AccountsName[a.Name] = a
+	} else {
+		return false
+	}
+	return true
+}
+
+func (this *MasterThread) AddRole(p *GameRole, a *GameAccount) bool {
+
+	this.AccountsMutex.Lock()
+	defer this.AccountsMutex.Unlock()
+	if v, ok := a.RolesId[p.Id]; !ok {
+		this.RolesId[p.Id] = p
+	} else {
+		return false
+	}
+	if v, ok := a.RolesName[p.Name]; !ok {
+		this.RolesName[p.Name] = p
+	} else {
+		return false
+	}
+
+	this.RolesMutex.Lock()
+	defer this.RolesMutex.Unlock()
+	if v, ok := this.RolesId[p.Id]; !ok {
+		this.RolesId[p.Id] = p
+	} else {
+		return false
+	}
+	if v, ok := this.RolesName[p.Name]; !ok {
+		this.RolesId[p.Name] = p
+	} else {
+		return false
+	}
+
+	return true
+}
+
+func (this *MasterThread) GetRoleById(id uint64) *GameRole {
+	this.RolesMutex.RLock()
+	defer this.RolesMutex.RUnlock()
+	if v, ok := this.RolesId[id]; ok {
+		return v
+	}
+	return nil
+}
+
+func (this *MasterThread) GetRoleByName(name string) *GameRole {
+	this.RolesMutex.RLock()
+	defer this.RolesMutex.RUnlock()
+	if v, ok := this.RolesName[name]; ok {
+		return v
+	}
+	return nil
+}
+
+func (this *MasterThread) GetAccountById(id uint64) *GameAccount {
+	this.AccountsMutex.RLock()
+	defer this.AccountsMutex.RUnlock()
+	if v, ok := this.AccountsId[id]; ok {
+		return v
+	}
+	return nil
+}
+
+func (this *MasterThread) GetAccountByName(name uint64) *GameAccount {
+	this.AccountsMutex.RLock()
+	defer this.AccountsMutex.RUnlock()
+	if v, ok := this.AccountsName[name]; ok {
+		return v
+	}
+	return nil
 }
 
 func main() {

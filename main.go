@@ -129,7 +129,7 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 }
 
 func (this *MasterThread) on_g2s_more_packet(pack *toogo.PacketReader, sessionId uint64) bool {
-	defer toogo.RecoverRead(proto.G2S_more_packet_Id)
+	defer toogo.RecoverRead("proto.G2S_more_packet_Id")
 
 	subPackCount := pack.ReadUint16()
 	for i := uint16(0); i < subPackCount; i++ {
@@ -147,12 +147,12 @@ func (this *MasterThread) AddAccount(a *GameAccount) bool {
 
 	this.AccountsMutex.Lock()
 	defer this.AccountsMutex.Unlock()
-	if v, ok := this.AccountsId[a.Id]; !ok {
+	if _, ok := this.AccountsId[a.Id]; !ok {
 		this.AccountsId[a.Id] = a
 	} else {
 		return false
 	}
-	if v, ok := this.AccountsName[a.Name]; !ok {
+	if _, ok := this.AccountsName[a.Name]; !ok {
 		this.AccountsName[a.Name] = a
 	} else {
 		return false
@@ -164,12 +164,12 @@ func (this *MasterThread) AddRole(p *GameRole, a *GameAccount) bool {
 
 	this.AccountsMutex.Lock()
 	defer this.AccountsMutex.Unlock()
-	if v, ok := a.RolesId[p.Id]; !ok {
+	if _, ok := a.RolesId[p.Id]; !ok {
 		this.RolesId[p.Id] = p
 	} else {
 		return false
 	}
-	if v, ok := a.RolesName[p.Name]; !ok {
+	if _, ok := a.RolesName[p.Name]; !ok {
 		this.RolesName[p.Name] = p
 	} else {
 		return false
@@ -177,13 +177,13 @@ func (this *MasterThread) AddRole(p *GameRole, a *GameAccount) bool {
 
 	this.RolesMutex.Lock()
 	defer this.RolesMutex.Unlock()
-	if v, ok := this.RolesId[p.Id]; !ok {
+	if _, ok := this.RolesId[p.Id]; !ok {
 		this.RolesId[p.Id] = p
 	} else {
 		return false
 	}
-	if v, ok := this.RolesName[p.Name]; !ok {
-		this.RolesId[p.Name] = p
+	if _, ok := this.RolesName[p.Name]; !ok {
+		this.RolesId[p.Id] = p
 	} else {
 		return false
 	}
@@ -218,7 +218,7 @@ func (this *MasterThread) GetAccountById(id uint64) *GameAccount {
 	return nil
 }
 
-func (this *MasterThread) GetAccountByName(name uint64) *GameAccount {
+func (this *MasterThread) GetAccountByName(name string) *GameAccount {
 	this.AccountsMutex.RLock()
 	defer this.AccountsMutex.RUnlock()
 	if v, ok := this.AccountsName[name]; ok {

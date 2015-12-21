@@ -147,16 +147,16 @@ func (this *MasterThread) AddAccount(a *GameAccount) bool {
 
 	this.AccountsMutex.Lock()
 	defer this.AccountsMutex.Unlock()
-	if _, ok := this.AccountsId[a.Id]; !ok {
-		this.AccountsId[a.Id] = a
-	} else {
+
+	if _, ok := this.AccountsId[a.Id]; ok {
 		return false
 	}
-	if _, ok := this.AccountsName[a.Name]; !ok {
-		this.AccountsName[a.Name] = a
-	} else {
+	if _, ok := this.AccountsName[a.Name]; ok {
 		return false
 	}
+
+	this.AccountsId[a.Id] = a
+	this.AccountsName[a.Name] = a
 	return true
 }
 
@@ -164,29 +164,26 @@ func (this *MasterThread) AddRole(p *GameRole, a *GameAccount) bool {
 
 	this.AccountsMutex.Lock()
 	defer this.AccountsMutex.Unlock()
-	if _, ok := a.RolesId[p.Id]; !ok {
-		this.RolesId[p.Id] = p
-	} else {
+	this.RolesMutex.Lock()
+	defer this.RolesMutex.Unlock()
+
+	if _, ok := a.RolesId[p.Id]; ok {
 		return false
 	}
-	if _, ok := a.RolesName[p.Name]; !ok {
-		this.RolesName[p.Name] = p
-	} else {
+	if _, ok := a.RolesName[p.Name]; ok {
+		return false
+	}
+	if _, ok := this.RolesId[p.Id]; ok {
+		return false
+	}
+	if _, ok := this.RolesName[p.Name]; ok {
 		return false
 	}
 
-	this.RolesMutex.Lock()
-	defer this.RolesMutex.Unlock()
-	if _, ok := this.RolesId[p.Id]; !ok {
-		this.RolesId[p.Id] = p
-	} else {
-		return false
-	}
-	if _, ok := this.RolesName[p.Name]; !ok {
-		this.RolesId[p.Id] = p
-	} else {
-		return false
-	}
+	this.RolesId[p.Id] = p
+	this.RolesName[p.Name] = p
+	this.RolesId[p.Id] = p
+	this.RolesId[p.Id] = p
 
 	return true
 }

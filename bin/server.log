@@ -854,3 +854,17 @@
 16:09:18 [D] 1 to_gate : Connect ok
 16:09:20 [I] 1 packLen=29,msgCount=1
 16:09:20 [I] 1 Say : 你好,世界!
+09:40:33 [D] 1           服务器{chat_svr}启动
+09:40:34 [E] 1 to_gate : Connect failed[Connect dialtcp failed: '127.0.0.1:9999' dial tcp 127.0.0.1:9999: connectex: No connection could be made because the target machine actively refused it.]
+10:59:24 [D] 1           服务器{chat_svr}启动
+10:59:25 [E] 1 to_gate : Connect failed[Connect dialtcp failed: '127.0.0.1:9999' dial tcp 127.0.0.1:9999: connectex: No connection could be made because the target machine actively refused it.]
+10:59:44 [D] 1           服务器{chat_svr}启动
+10:59:44 [D] 1 to_gate : Connect ok
+10:59:44 [E] 1 to_gate : Connect read[EOF]
+10:59:44 [D] 1 to_gate : Connect pre close
+10:59:44 [D] 1 to_gate : Connect close ok.
+11:08:56 [D] 1           服务器{chat_svr}启动
+11:08:56 [D] 1 to_gate : Connect ok
+11:08:56 [E] 1 to_gate : Connect read[EOF]
+11:08:56 [D] 1 to_gate : Connect pre close
+11:08:56 [D] 1 to_gate : Connect close ok.

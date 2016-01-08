@@ -868,3 +868,87 @@
 11:08:56 [E] 1 to_gate : Connect read[EOF]
 11:08:56 [D] 1 to_gate : Connect pre close
 11:08:56 [D] 1 to_gate : Connect close ok.
+11:57:35 [D] 1           服务器{chat_svr}启动
+11:57:35 [D] 1 to_gate : Connect ok
+11:57:35 [E] 1 to_gate : Connect read[EOF]
+11:57:35 [D] 1 to_gate : Connect pre close
+11:57:35 [D] 1 to_gate : Connect close ok.
+11:58:21 [D] 1           服务器{chat_svr}启动
+11:58:21 [D] 1 to_gate : Connect ok
+11:58:22 [E] 1 to_gate : Connect read[EOF]
+11:58:22 [D] 1 to_gate : Connect pre close
+11:58:22 [D] 1 to_gate : Connect close ok.
+13:25:33 [D] 1           服务器{chat_svr}启动
+13:25:33 [D] 1 to_gate : Connect ok
+13:25:33 [E] 1 to_gate : Connect read[EOF]
+13:25:33 [D] 1 to_gate : Connect pre close
+13:25:33 [D] 1 to_gate : Connect close ok.
+13:27:26 [D] 1           服务器{chat_svr}启动
+13:27:26 [D] 1 to_gate : Connect ok
+13:27:26 [E] 1 to_gate : Connect read[EOF]
+13:27:26 [D] 1 to_gate : Connect pre close
+13:27:26 [D] 1 to_gate : Connect close ok.
+13:29:05 [D] 1           服务器{chat_svr}启动
+13:29:05 [D] 1 to_gate : Connect ok
+13:29:05 [E] 1 to_gate : Connect read[EOF]
+13:29:05 [D] 1 to_gate : Connect pre close
+13:29:05 [D] 1 to_gate : Connect close ok.
+13:30:19 [D] 1           服务器{chat_svr}启动
+13:30:19 [D] 1 to_gate : Connect ok
+13:30:19 [E] 1 to_gate : Connect read[EOF]
+13:30:19 [D] 1 to_gate : Connect pre close
+13:30:19 [D] 1 to_gate : Connect close ok.
+13:50:39 [D] 1           服务器{chat_svr}启动
+13:50:39 [D] 1 to_gate : Connect ok
+13:50:39 [E] 1 to_gate : Connect read[EOF]
+13:50:39 [D] 1 to_gate : Connect pre close
+13:50:39 [D] 1 to_gate : Connect close ok.
+13:51:50 [D] 1           服务器{chat_svr}启动
+13:51:50 [D] 1 to_gate : Connect ok
+13:51:51 [E] 1 to_gate : Connect read[EOF]
+13:51:51 [D] 1 to_gate : Connect pre close
+13:51:51 [D] 1 to_gate : Connect close ok.
+13:52:57 [D] 1           服务器{chat_svr}启动
+13:52:57 [D] 1 to_gate : Connect ok
+13:52:57 [E] 1 to_gate : Connect read[EOF]
+13:52:57 [D] 1 to_gate : Connect pre close
+13:52:57 [D] 1 to_gate : Connect close ok.
+13:53:59 [D] 1           服务器{chat_svr}启动
+13:53:59 [D] 1 to_gate : Connect ok
+13:53:59 [E] 1 to_gate : Connect read[EOF]
+13:53:59 [D] 1 to_gate : Connect pre close
+13:53:59 [D] 1 to_gate : Connect close ok.
+13:54:23 [D] 1           服务器{chat_svr}启动
+13:54:23 [D] 1 to_gate : Connect ok
+13:54:23 [E] 1 to_gate : Connect read[EOF]
+13:54:23 [D] 1 to_gate : Connect pre close
+13:54:23 [D] 1 to_gate : Connect close ok.
+14:02:28 [D] 1           服务器{chat_svr}启动
+14:02:28 [D] 1 to_gate : Connect ok
+15:53:23 [D] 1           服务器{chat_svr}启动
+15:53:23 [D] 1 to_gate : Connect ok
+15:54:55 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:4151->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:54:55 [D] 1 to_gate : Connect pre close
+15:54:55 [D] 1 to_gate : Connect close ok.
+15:55:11 [D] 1           服务器{chat_svr}启动
+15:55:11 [D] 1 to_gate : Connect ok
+15:55:31 [D] 1           服务器{chat_svr}启动
+15:55:31 [D] 1 to_gate : Connect ok
+15:58:02 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:4242->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+15:58:02 [D] 1 to_gate : Connect pre close
+15:58:02 [D] 1 to_gate : Connect close ok.
+15:58:10 [D] 1           服务器{chat_svr}启动
+15:58:10 [D] 1 to_gate : Connect ok
+16:09:31 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:4307->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+16:09:31 [D] 1 to_gate : Connect pre close
+16:09:31 [D] 1 to_gate : Connect close ok.
+16:09:39 [D] 1           服务器{chat_svr}启动
+16:09:39 [D] 1 to_gate : Connect ok
+16:11:55 [D] 1           服务器{chat_svr}启动
+16:11:55 [D] 1 to_gate : Connect ok
+16:24:11 [E] 1 to_gate : Connect read[read tcp 127.0.0.1:4636->127.0.0.1:9999: wsarecv: An existing connection was forcibly closed by the remote host.]
+16:24:11 [D] 1 to_gate : Connect pre close
+16:24:11 [D] 1 to_gate : Connect close ok.
+16:24:18 [D] 1           服务器{chat_svr}启动
+16:24:18 [D] 1 to_gate : Connect ok
+16:24:21 [I] 1 Say : 你好,世界!

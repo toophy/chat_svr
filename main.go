@@ -84,13 +84,26 @@ func (this *MasterThread) On_netEvent(m *toogo.Tmsg_net) bool {
 	case "connect ok":
 		this.LogDebug("%s : Connect ok", name_fix)
 
-		p := toogo.NewPacket(128, m.SessionId)
+		p := toogo.NewPacketEx(128, m.SessionId, toogo.SessionPacket_G2S)
+		p.WritePacketType = toogo.SessionPacket_G2S
+		p.Tgid = 0
 
 		msgLogin := new(proto.S2G_registe)
-		msgLogin.Sid = 1
+		msgLogin.Sid = toogo.Tgid_make_Sid(1, 1)
 		msgLogin.Write(p)
 
-		toogo.SendPacket(p)
+		p.PacketWriteOver()
+
+		fmt.Printf("%-v\n", p.Data)
+
+		px := toogo.NewPacket(168, m.SessionId)
+
+		px.WriteDataEx(p.Data, uint64(len(p.Data)))
+		px.Count = 1
+
+		fmt.Printf("%-v\n", px.Data)
+
+		toogo.SendPacket(px)
 
 	case "read failed":
 		this.LogError("%s : Connect read[%s]", name_fix, m.Info)

@@ -94,14 +94,10 @@ func (this *MasterThread) On_netEvent(m *toogo.Tmsg_net) bool {
 
 		p.PacketWriteOver()
 
-		fmt.Printf("%-v\n", p.Data)
-
 		px := toogo.NewPacket(168, m.SessionId)
 
 		px.WriteDataEx(p.Data, uint64(len(p.Data)))
 		px.Count = 1
-
-		fmt.Printf("%-v\n", px.Data)
 
 		toogo.SendPacket(px)
 
@@ -136,6 +132,24 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 	msg.Read(pack)
 
 	this.LogInfo("Say : %s", msg.Data)
+
+	// 广播消息
+	p := toogo.NewPacketEx(128, sessionId, toogo.SessionPacket_G2S)
+	p.WritePacketType = toogo.SessionPacket_G2S
+	p.Tgid = toogo.Tgid_make_Rid(1, 1, 1)
+
+	msgChat := new(proto.S2C_chat)
+	msgChat.Data = msg.Data
+	msgChat.Write(p)
+
+	p.PacketWriteOver()
+
+	px := toogo.NewPacket(168, sessionId)
+
+	px.WriteDataEx(p.Data, uint64(len(p.Data)))
+	px.Count = 1
+
+	toogo.SendPacket(px)
 
 	return true
 }

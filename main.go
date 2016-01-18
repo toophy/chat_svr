@@ -140,7 +140,7 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 
 	msgChat := new(proto.S2C_chat)
 	msgChat.Data = msg.Data
-	msgChat.Write(p)
+	msgChat.Write(p, toogo.Tgid_make_Rid(1, 1, 1))
 
 	p.PacketWriteOver()
 
@@ -150,6 +150,11 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 	px.Count = 1
 
 	toogo.SendPacket(px)
+
+	py := toogo.NewSGPacket(170, sessionId)
+	msgChat.Write(py, toogo.Tgid_make_Rid(1, 1, 1))
+	msgChat.Write(py, toogo.Tgid_make_Rid(1, 1, 1))
+	py.PacketWriteOver()
 
 	return true
 }

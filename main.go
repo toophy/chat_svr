@@ -84,22 +84,15 @@ func (this *MasterThread) On_netEvent(m *toogo.Tmsg_net) bool {
 	case "connect ok":
 		this.LogDebug("%s : Connect ok", name_fix)
 
-		p := toogo.NewPacketEx(128, m.SessionId, toogo.SessionPacket_G2S)
-		p.WritePacketType = toogo.SessionPacket_G2S
-		p.Tgid = 0
+		p := toogo.NewPacket(128, m.SessionId)
 
 		msgLogin := new(proto.S2G_registe)
 		msgLogin.Sid = toogo.Tgid_make_Sid(1, 1)
-		msgLogin.Write(p)
+		msgLogin.Write(p, uint64(0))
 
 		p.PacketWriteOver()
 
-		px := toogo.NewPacket(168, m.SessionId)
-
-		px.WriteDataEx(p.Data, uint64(len(p.Data)))
-		px.Count = 1
-
-		toogo.SendPacket(px)
+		toogo.SendPacket(p)
 
 	case "read failed":
 		this.LogError("%s : Connect read[%s]", name_fix, m.Info)
@@ -134,27 +127,14 @@ func (this *MasterThread) on_c2s_chat(pack *toogo.PacketReader, sessionId uint64
 	this.LogInfo("Say : %s", msg.Data)
 
 	// 广播消息
-	p := toogo.NewPacketEx(128, sessionId, toogo.SessionPacket_G2S)
-	p.WritePacketType = toogo.SessionPacket_G2S
-	p.Tgid = toogo.Tgid_make_Rid(1, 1, 1)
+	p := toogo.NewPacket(128, sessionId)
 
 	msgChat := new(proto.S2C_chat)
 	msgChat.Data = msg.Data
-	msgChat.Write(p, toogo.Tgid_make_Rid(1, 1, 1))
+	msgChat.Write(p, pack.LinkTgid)
 
 	p.PacketWriteOver()
-
-	px := toogo.NewPacket(168, sessionId)
-
-	px.WriteDataEx(p.Data, uint64(len(p.Data)))
-	px.Count = 1
-
-	toogo.SendPacket(px)
-
-	py := toogo.NewSGPacket(170, sessionId)
-	msgChat.Write(py, toogo.Tgid_make_Rid(1, 1, 1))
-	msgChat.Write(py, toogo.Tgid_make_Rid(1, 1, 1))
-	py.PacketWriteOver()
+	toogo.SendPacket(p)
 
 	return true
 }

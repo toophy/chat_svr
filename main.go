@@ -90,6 +90,8 @@ func (this *MasterThread) On_netEvent(m *toogo.Tmsg_net) bool {
 		msgLogin.Sid = toogo.Tgid_make_Sid(1, 1)
 		msgLogin.Write(p, uint64(0))
 
+		this.LogDebug("toMailId=%d", p.GetToMailId())
+
 		p.PacketWriteOver()
 
 		toogo.SendPacket(p)
